@@ -4,7 +4,7 @@ import Root from '../components/common/Root';
 import Footer from '../components/common/Footer';
 import commerce from '../lib/commerce';
 import Router from 'next/router';
-import LoginAnimation from '../../components/customer/LoginAnimation';
+import LoginAnimation from '../components/customer/LoginAnimation';
 
 class LoginPage extends Component {
   constructor(props) {
@@ -35,7 +35,7 @@ class LoginPage extends Component {
 
     this.setState({ loading: true });
 
-    commerce.customer.getToken('', token).then(() => {
+    commerce.customer.getToken(token).then(() => {
       Router.push('/account');
     }).catch((error) => {
       this.setState({

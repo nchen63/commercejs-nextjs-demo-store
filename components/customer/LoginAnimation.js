@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Lottie from 'react-lottie';
-import animationData from '../../lotties/login.json.json';
+import animationData from '../../lotties/login.json';
 
 export default function LoginAnimation() {
   const defaultOptions = {
